@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+}
+
+.completed {
+    text-decoration: line-through;
+}

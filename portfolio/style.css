@@ -1,0 +1,276 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap);
+
+/*reset default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #fff;
+}
+
+header {
+    background-image: url('./images/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 40rem;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    height: 15rem;
+    width: 18rem;
+    font-size: 1.5rem;
+    color: #f6f6f7;
+    margin: auto auto 15px 15px;
+    display: flex;
+    align-items: flex-end;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    min-width: 20vw;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.links li {
+    list-style: none;
+    width: 8rem;
+    align-content: center;
+}
+
+.links li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f6f6f7;
+    margin: 5px;
+    height: 15%;
+    width: auto;
+}
+
+#home {
+    color: black;
+    background-color: lightgrey;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: darkblue;
+    margin: 5px;
+}
+
+
+#about {
+    height: 70rem;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
+    background-color: darkgrey;
+}
+
+#about-pictures {
+    height: 35vw;
+    width: auto;
+}
+
+#about-pic {
+    /*display: block;*/
+    height: auto;
+    width: 40%;
+    position: relative;
+    top: 15rem;
+    left: 20rem;
+    transform: translate(1vw, 5vh);
+    z-index: 10;
+}
+
+#about-back {
+    height: auto; /* to make it resize with screen size and lock aspect ratio*/
+    width: 80%;
+    position: relative;
+    transform: translate(1vw, -30vh);
+    z-index: 5;
+}
+
+#about-me {
+    width: 60%;
+    display: flex;
+    font-size: 1.1rem;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-5vw, 1vh);
+    z-index: 25;
+}
+
+#about-me h2 {
+    font-size: 2.5rem;
+}
+
+#about-me p {
+    margin: 10px 0 10px 0;
+    /*text-shadow: 0 0 1px #A9A9A9;*/
+    text-shadow: 0 0 3px #A9A9A9, 0 0 5px #A9A9A9;
+}
+
+#portfolio {
+    height: 60rem;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    background-color: lightgrey;
+}
+
+#portfolio h2 {
+    position: relative;
+    margin-top: 12rem;
+    font-size: 3rem;
+}
+
+#port-pics {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#flashcards {
+    height: 30%;
+    width: auto;
+    position: relative;
+    margin-top: 8rem;
+}
+
+#virtual-piano {
+    height: 30%;
+    width: auto;
+    position: relative;
+    margin-top: 8rem;
+}
+
+#port-pics div p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: translate(0, -3rem);
+}
+
+#contacts {
+    height: 20rem;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f7;
+    margin-bottom: 3rem;
+}
+
+#contacts h2 {
+    position: relative;
+    margin-top: 7rem;
+}
+
+#social {
+    display: flex;
+    width: 20rem;
+    margin-top: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#social a img {
+    width: 3rem;
+    height: 3rem;
+    text-decoration: none;
+}
+
+footer {
+    max-width: 90vw;
+    height: 10rem;
+    color: #f6f6f7;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer p {
+    max-width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;  /* to disable scroll */
+    }
+
+    .links {
+        position: absolute;
+        right: 10vw;
+        height: 60vh;
+        top: 4vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transform: translateX(125%); /* to move buttons outside window in x direction, else even if you don't see them you can click */
+        transition: transform 0.5s ease, opacity 0.2s ease-in-out;
+    }
+
+    .links li a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f6f6f7;
+        height: 12vh;
+        width: auto;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.links-active {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes navLinkFade {
+    from {
+        transform: translateX(50px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+    
+}

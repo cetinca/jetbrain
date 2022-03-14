@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Space</title>
+    <link rel="stylesheet" href="style.css">
+    <script async type="text/javascript" src="script.js" ></script>
+</head>
+<body>
+    <div class='space'>
+        <div class='planet-area'>
+            <img class="planet" src="./mars.png">
+            <img class='rocket' src='./rocket.png' id="r-07">
+        </div>
+        <div class="control-panel">
+            <div class="control-panel__inner">
+                <input id="pass" type="password"  placeholder="Enter password to unlock"/>
+                <input id="ok" type="button" value="OK" onclick="passCheck()"/>
+                <div class="check-buttons">
+                    <input type="checkbox" onchange="checkRocket()">
+                    <input type="checkbox" onchange="checkRocket()">
+                    <input type="checkbox" onchange="checkRocket()">
+                    <input type="checkbox" onchange="checkRocket()">
+                    <input type="checkbox" onchange="checkRocket()">
+                    <input type="checkbox" onchange="checkRocket()">
+                </div>
+                <div class="levers">
+                    <input type="range" min="0" max="100" value="0" step="10" onchange="checkRocket()">
+                    <input type="range" min="0" max="100" value="0" step="10" onchange="checkRocket()">
+                    <input type="range" min="0" max="100" value="0" step="10" onchange="checkRocket()">
+                    <input type="range" min="0" max="100" value="0" step="10" onchange="checkRocket()">
+                    <input type="range" min="0" max="100" value="0" step="10" onchange="checkRocket()">
+                </div>
+                <input type="button" value="Launch" id="launch" onclick="fire()"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

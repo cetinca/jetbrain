@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypergram</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="main">
+        <div class="canvas">
+            <canvas id="canvas">UPLOAD FILE</canvas>
+        </div>
+        <div class="flex-container">
+            <div class="flex-item">
+                <label for="file-input" id="upload-label" >UPLOAD FILE</label>
+                <input type="file" name="file" id="file-input" style="visibility: hidden" accept="image/*">
+            </div>
+            <div class="flex-item">
+                <label for="brightness">Brightness</label>
+                <input type="range" id="brightness" min="-255" max="255" value="0" step="1">
+            </div>
+            <div class="flex-item">
+                <label for="contrast">Contrast</label>
+                <input type="range" id="contrast" min="-128" max="128" value="0" step="1">
+            </div>
+            <div class="flex-item">
+                <label for="transparent">Transparent</label>
+                <input type="range" id="transparent" min="0" max="1" value="1" step="0.1">
+            </div>
+            <div class="flex-item">
+                <button id="save-button">SAVE IMAGE</button>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>

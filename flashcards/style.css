@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* The display: block Value
+Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements. */
+
+body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    width: 48rem;
+    height: 36rem;
+    color: #007bff;
+    background-color: #cce4ff;
+    margin: 5% auto auto 5%;
+    position: absolute;
+    border-radius: 8px;
+    display: block;
+}
+
+#body {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+}
+
+#quiz__area {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    color: #007bff;
+}
+
+h1 {
+    color: #fff;
+    position: relative;
+    left: 16%;
+    margin: 30px 0 5px 0;
+    background-color: #007bff;
+    border-radius: 8px;
+    padding: 5px;
+    width: 28rem;
+}
+
+.quiz {
+    margin: 10px auto auto 20px;
+    width: 45rem;
+    height: 33rem;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+}
+
+.quiz__cards {
+    position: relative;
+    left: 16%;
+    width: 28rem;
+    height: 22rem;
+    background-color: #cce4ff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: inline-block;
+    flex: 0 0 6.5rem;
+    height: 6.5rem;
+    margin: 5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.filler {
+    width: 100%;
+    height: 100%;
+    transition: 2s ease;
+    transform-style: preserve-3d;
+
+}
+
+.filler:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.front {
+    z-index: 1;
+}
+
+.back {
+    z-index: 2;
+    transform: rotateY(180deg);
+    color: #fff;
+    background-color: #007bff;
+}

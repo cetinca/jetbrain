@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<header>
+    <h1>Cetin CAKIR, <br/>Full Stack Developer</h1>
+    <nav>
+        <ul class="links">
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contacts">CONTACTS</a></li>
+            <li><a id="home" href="#home">HOME</a></li>
+        </ul>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    </nav>
+</header>
+<section id="about">
+    <div id="about-pictures">
+        <img id="about-pic" class="person" src="images/person.jpg">
+        <img id="about-back" src="images/image.jpg">
+    </div>
+    <div id="about-me">
+        <h2>About me</h2>
+        <p>Hi, I'm Cetin. I live in Turkey.</p>
+        <p>I am an electrical engineer, i have been working-learning with Python for 2.5 years.</p>
+        <p>Beginning of my carrier i worked for industrial facilities in Production and Maintenance departments.</p>
+        <p>I joined IT after. Worked in the area, Project management and system design.</p>
+        <p>TCP communication between vehicle, charging station and backend servers.</p>
+        <p>Charging Station design (Software + electrical design).</p>
+        <p>Maintaining and managing scooter fleets.</p>
+        <p>I have, Networking, SQL, Python, Tkinter knowledge.</p>
+        <p>Right now, i am learning HTML, CSS and Javascript to improve my self.</p>
+        <div class="Skills">
+            <p><strong>Skills:</strong><span>Python, HTML, CSS, JS</span></p>
+        </div>
+    </div>
+</section>
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div id="port-pics">
+        <div>
+            <img id="flashcards" src="images/project1.png">
+            <p>Flashcards
+                <button id="myBtn" class="open-window">Detail</button>
+            </p>
+        </div>
+        <div>
+            <img id="virtual-piano" src="images/project2.png">
+            <p>Virtual Piano
+                <button id="myBtn2" class="open-window">Detail</button>
+            </p>
+        </div>
+    </div>
+</section>
+<section id="contacts">
+    <h2>Contact</h2>
+    <p>You can contact me via <a href="mailto:abcdef.ghijkl@gmail.com">abcdef.ghijkl@gmail.com</a></p>
+    <div id="social">
+        <a href="https://github.com/cetinca/jetbrain"><img src="./images/github.svg" alt="github"></a>
+        <a href="https://github.com/cetinca/jetbrain"><img src="./images/facebook.svg" alt="facebook"></a>
+        <a href="https://github.com/cetinca/jetbrain"><img src="./images/twitter.svg" alt="twitter"></a>
+        <a href="https://github.com/cetinca/jetbrain"><img src="./images/instagram%201.svg" alt="instagram"></a>
+    </div>
+</section>
+<footer>
+    <p>Cetin CAKIR</p>
+    <p>2021</p>
+</footer>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="window">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Flashcard</h3>
+        <p>A flashcard or flash card (also known as an index card) is a card bearing information on both sides, which is
+            intended to be used as an aid in memorization. Each flashcard bears a question on one side and an answer on
+            the other. Flashcards are often used to memorize vocabulary, historical dates, formulas or any subject
+            matter that can be learned via a question-and-answer format. Flashcards can be virtual (part of a flashcard
+            software), or physical.
+            Flashcards are an application of the testing effect − the finding that long-term memory is increased when
+            some of the learning period is devoted to retrieving the information through testing with proper feedback.
+            Study habits affect the rate at which a flashcard-user learns, and proper spacing of flashcards has been
+            proven to accelerate learning. A number of spaced repetition software programs exist which take advantage of
+            this principle.</p>
+    </div>
+</div>
+<div id="myModal2" class="modal">
+    <!-- Modal content -->
+    <div class="window">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Virtual Piano</h3>
+        <p>One of the many things that a front-end developer has to take care of is binding the functionality of a
+            web application to the keys on the keyboard. In order to develop and strengthen the important skills of
+            working with keyboard keys, i made a virtual piano in this project.</p>
+    </div>
+</div>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="script2.js"></script>
+</body>
+</html>

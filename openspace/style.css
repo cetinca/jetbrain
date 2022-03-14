@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Oxygen&family=Permanent+Marker&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+}
+
+.space {
+    width: 80vw;
+    height: 90vh;
+    background-color: black;
+    background-image: url("./space.png");
+    background-repeat: no-repeat;
+    background-size: auto 90vh;
+    background-position-x: left;
+    background-position-y: bottom;
+}
+
+.planet-area {
+    height: 100%;
+}
+
+.planet {
+    position: absolute;
+    height: 50%;
+    bottom: 10vh;
+    transform: translateX(0px) translateY(0px);
+}
+
+.rocket {
+    height: 20%;
+    transform: translateX(15vw) translateY(40vh) rotate(30deg);
+}
+
+.flying {
+    transition: 2s ease-in-out;
+    transform: translate(540px,-200px);
+}
+
+.control-panel {
+    position: absolute;
+    transform: translateX(40vw) translateY(-80vh);
+    width: 21vw;
+    height: 42vh;
+    background-color: yellow;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 16px, rgba(0, 0, 0, 1) 16px, rgba(0, 0, 0, 1) 32px);
+    --darkreader-inline-bgcolor: #60686c;
+    --darkreader-inline-bgimage: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 16px, rgba(24, 26, 27, 0.5) 16px, rgba(24, 26, 27, 0.5) 32px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.control-panel__inner {
+    width: 20vw;
+    height: 40vh;
+    background-color: #252424;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+div input {
+    height: 4vh;
+    cursor: pointer;
+    flex-direction: row;
+}
+
+
+
+#pass {
+    left: 0px;
+    width: 12vw;
+    border: solid yellow 2px;
+    background-color: black;
+    color: yellow;
+    border-radius: 4px;
+    transform: translateX(1vw) translateY(3vh);
+}
+
+#ok {
+    position: relative;
+    width: 5vw;
+    /*top: 50px;*/
+    transform: translateX(14vw) translateY(-1vh);
+    border: solid yellow 2px;
+    background-color: black;
+    color: yellow;
+    border-radius: 4px;
+}
+
+#ok:active {
+    transform: translateX(14vw) translateY(-1vh) scale(0.98);
+}
+
+
+.check-buttons {
+    display: flex;
+    height: 10vh;
+    width: 20vw;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.check-buttons input {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.levers {
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.levers input {
+    transform: rotate(270deg);
+    width: 3rem;
+    height: 5rem;
+    color: blue;
+    cursor: pointer;
+}
+
+#launch {
+    width: 5vw;
+    height: 6vh;
+    cursor: pointer;
+    margin-left: 7vw;
+    margin-top: 4vh;
+    background-color: #ff0000;
+    color: white;
+    border: solid white 2px;
+    border-radius: 500px;
+}
+
+#launch:active {
+    transform: scale(0.98);
+}
+
+
