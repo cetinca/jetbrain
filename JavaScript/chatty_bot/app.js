@@ -1,4 +1,4 @@
-// node install prompt-sync
+// npm install prompt-sync
 // node app.js
 // const input = require('sync-input');
 const input = require('prompt-sync')();
