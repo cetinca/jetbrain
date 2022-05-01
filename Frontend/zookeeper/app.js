@@ -1,4 +1,7 @@
-input = require('sync-input');
+// node install prompt-sync
+// node app.js
+// const input = require('sync-input');
+const input = require('prompt-sync')();
 
 camel =`
 Switching on the camera in the camel habitat...
