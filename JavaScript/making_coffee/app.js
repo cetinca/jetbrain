@@ -20,6 +20,12 @@ units = {
    "disposable cups": "piece"
 }
 
+ingredients_old = [
+   [200, "ml", "water"],
+   [50, "ml", "milk"],
+   [15, "gr", "coffee beans"]
+]
+
 ingredients = {
    "water": 200,
    "milk": 50,
@@ -65,6 +71,21 @@ consume = function (cups) {
    money = money + ingredients["money"] * cups
 }
 
+check_for_material_old = function (cups) {
+   cups_for_mats = []
+   for (i=0; i < ingredients_old.length; i++) {
+      available = Math.floor(inventory[ingredients_old[i][2]] / ingredients_old[i][0])
+      cups_for_mats.push(available)
+   }
+   can_make = Math.min(...cups_for_mats)
+   if (can_make < cups) {
+      return `No, I can make only ${can_make} cups of coffee`
+   } else if (can_make === cups) {
+      return `Yes, I can make that amount of coffee`
+   } else {
+      return `Yes, I can make that amount of coffee (and even ${can_make - cups} more than that)`
+   }
+}
 
 check_for_material = function (cups) {
    cups_for_mats = []
@@ -88,25 +109,30 @@ check_for_material = function (cups) {
    
 }
 
+
 take_money = function () {
    result = `I gave you \$${money}`
    money = 0
    return result
 }
 
-print_coffee_machine()
-console.log(menu)
-user_input = input()
+main = function () {
+   print_coffee_machine()
+   console.log(menu)
+   user_input = input()
 
-if (user_input == "take") {
-   console.log(take_money())
-} else if (user_input == "fill") {
-   fill()
-} else if(user_input == "buy") {
-   console.log(`How many cup of coffe do you want?`)
-   user_input = parseInt(input())
-   result = check_for_material(user_input)
-   console.log(result)
+   if (user_input == "take") {
+      console.log(take_money())
+   } else if (user_input == "fill") {
+      fill()
+   } else if(user_input == "buy") {
+      console.log(`How many cup of coffe do you want?`)
+      user_input = parseInt(input())
+      result = check_for_material(user_input)
+      console.log(result)
+   }
 }
 
+main()
+console.log()
 print_coffee_machine()
